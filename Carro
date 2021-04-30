@@ -1,0 +1,52 @@
+package carro;
+
+
+public class Carro {
+
+    private boolean on;
+    private int speed;
+
+    public void iniciar() {
+        on = false;
+        speed = 0;
+    }
+
+    public void ligar() {
+        if (on == false) {
+            System.out.println("Ligando...");
+            on = true;
+        }
+    }
+
+    public void desligar() {
+        if (on == true && speed == 0) {
+            System.out.println("Desligando...");
+            on = false;
+        }
+
+    }
+
+    public boolean geton() {
+        return on;
+    }
+
+    public void acelerar() {
+        if (on == true && speed < 240) {
+            System.out.println("Acelerando...");
+            speed += 10;
+        }
+    }
+
+    public void brecar() {
+        if (speed > 0) {
+            System.out.println("Brecando...");
+            speed -= 10;
+        }
+    }
+
+    public int getspeed() {
+        return speed;
+    }
+    
+}
+  
